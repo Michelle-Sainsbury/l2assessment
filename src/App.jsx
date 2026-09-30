@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import AnalyzePage from './pages/AnalyzePage'
 import HistoryPage from './pages/HistoryPage'
 import DashboardPage from './pages/DashboardPage'
+import TriageDashboard from './components/TriageDashboard'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/analyze" element={<AnalyzePage />} />
+          <Route path="/analyze" element={<TriageDashboard />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
