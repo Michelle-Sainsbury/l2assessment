@@ -1,21 +1,27 @@
+import { calculateUrgency } from '../utils/urgencyScorer.js';
+
 /**
  * Service to handle LLM triage requests with robust error handling, 
  * exponential backoff retry logic, and fallback categorization.
  */
 
 export async function analyzeCustomerMessage(message, apiKey, retryCount = 2) {
+  if (!message || !message.trim()) {
+    throw new Error("Message content cannot be empty.");
+  }
+
+  const priority = calculateUrgency(message);
   const FALLBACK_RESULT = {
     category: "General Support",
-    priority: "Medium",
+    priority,
     routingQueue: "General Queue",
     summary: message.length > 60 ? message.substring(0, 60) + "..." : message,
     confidence: "Low (Fallback Triggered)",
     isFallback: true
   };
 
-  if (!message || !message.trim()) {
-    throw new Error("Message content cannot be empty.");
-  }
+  // No credentials: use local triage without sending a request.
+  if (!apiKey?.trim()) return FALLBACK_RESULT;
 
   for (let attempt = 0; attempt <= retryCount; attempt++) {
     try {
@@ -51,6 +57,7 @@ export async function analyzeCustomerMessage(message, apiKey, retryCount = 2) {
       
       return {
         ...parsedContent,
+        priority, // The shared scorer is authoritative on both service paths.
         isFallback: false
       };
 

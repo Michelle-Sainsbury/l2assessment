@@ -119,3 +119,17 @@ The dashboard won't load when I try to access it. I've tried refreshing but it k
 ## License
 
 This project is for educational purposes only.
+
+## Week 8 Assessment Results
+
+See [the assessment report](docs/week-8-assessment.md) for the original sample
+results, top three problems, urgency changes, regression coverage and final checks.
+Use Node 22.12+ or Node 24 for the current Vite toolchain. No API key is needed for
+tests or local urgency scoring on the dashboard.
+
+```bash
+npm test
+npm run test:examples
+npm run lint
+npm run build
+```

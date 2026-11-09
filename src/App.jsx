@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import HomePage from './pages/HomePage'
-import AnalyzePage from './pages/AnalyzePage'
 import HistoryPage from './pages/HistoryPage'
 import DashboardPage from './pages/DashboardPage'
-import TriageDashboard from './components/TriageDashboard'
+import TriageDashboard from './components/triagedashboard'
 
 function App() {
   return (

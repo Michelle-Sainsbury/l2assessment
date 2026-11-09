@@ -1,0 +1,70 @@
+{
+  "baselineCommit": "1b5451fd38aa056bba55cf7331a190989d6cbdd5",
+  "note": "Original scorer evaluated with controlled local dates; no API calls.",
+  "results": [
+    {
+      "id": 1,
+      "title": "Production Emergency (Incorrectly marked Low)",
+      "message": "Database connection lost",
+      "weekdayBusiness": "Low",
+      "weekdayNight": "Low",
+      "weekendNight": "Low"
+    },
+    {
+      "id": 2,
+      "title": "Friendly Thank You (Incorrectly marked High)",
+      "message": "Thank you so much! Your team has been incredibly helpful and I really appreciate the fast response to my question earlier today!",
+      "weekdayBusiness": "Medium",
+      "weekdayNight": "Medium",
+      "weekendNight": "Medium"
+    },
+    {
+      "id": 3,
+      "title": "Feature Request (Wrong Template)",
+      "message": "Could you add an export to CSV feature? Would be really useful for my monthly reports.",
+      "weekdayBusiness": "Low",
+      "weekdayNight": "Low",
+      "weekendNight": "Low"
+    },
+    {
+      "id": 4,
+      "title": "Billing + Technical Hybrid (Ambiguous)",
+      "message": "My payment failed and now I can't access the dashboard. Is there a bug or do I need to update my credit card?",
+      "weekdayBusiness": "Low",
+      "weekdayNight": "Low",
+      "weekendNight": "Low"
+    },
+    {
+      "id": 5,
+      "title": "Minimal Input (No Validation)",
+      "message": "hi",
+      "weekdayBusiness": "Low",
+      "weekdayNight": "Low",
+      "weekendNight": "Low"
+    },
+    {
+      "id": 6,
+      "title": "Urgent Short Message",
+      "message": "Server down now",
+      "weekdayBusiness": "Low",
+      "weekdayNight": "Low",
+      "weekendNight": "Low"
+    },
+    {
+      "id": 7,
+      "title": "Long Rambling Non-Urgent",
+      "message": "Hi! I was just browsing through your website and noticed you have a really nice design! I especially like the color scheme and the way you've organized the navigation menu! Everything looks so professional and clean! Just wanted to share my positive feedback!",
+      "weekdayBusiness": "High",
+      "weekdayNight": "High",
+      "weekendNight": "High"
+    },
+    {
+      "id": 8,
+      "title": "General Inquiry",
+      "message": "What are your business hours?",
+      "weekdayBusiness": "Low",
+      "weekdayNight": "Low",
+      "weekendNight": "Low"
+    }
+  ]
+}

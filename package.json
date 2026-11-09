@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test": "node --test tests/*.test.js",
+    "test:examples": "node scripts/test-urgency-examples.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

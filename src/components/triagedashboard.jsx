@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { analyzeCustomerMessage, SAMPLE_QUEUE } from '../services/triageService';
-import './TriageDashboard.css';
+import { analyzeCustomerMessage, SAMPLE_QUEUE } from '../services/triageservice';
+import './triagedashboard.css';
 
 export default function TriageDashboard() {
   const [messages, setMessages] = useState(SAMPLE_QUEUE);
